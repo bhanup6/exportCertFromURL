@@ -1,3 +1,4 @@
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls -bor [Net.SecurityProtocolType]::Tls11 -bor [Net.SecurityProtocolType]::Tls12
 try {
     $request = [System.Net.HttpWebRequest]::Create("https://digicert.com")
     $response = $request.GetResponse()
